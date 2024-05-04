@@ -50,13 +50,7 @@ pipeline {
             }
         }
 
-    stage('Cleanup Go Modules Cache') {
-    steps {
-        script {
-            sh 'docker run --rm -v $(pwd):/app -w /app golang go clean -cache -modcache'
-        }
-    }
-}
+    
             stage('checkoutservice') {
               steps {
                script {
