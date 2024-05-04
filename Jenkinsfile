@@ -41,7 +41,7 @@ pipeline {
             }
         }
        }
-stages {
+stage {
         stage('Cleanup Docker Environment') {
             steps {
                 script {
