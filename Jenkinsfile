@@ -13,8 +13,6 @@ pipeline {
                 }
             }
         } 
-  
-      
       stage('adservice') {
               steps {
                script {
@@ -41,16 +39,6 @@ pipeline {
             }
         }
        }
-
-        stage('Cleanup Docker Environment') {
-            steps {
-                script {
-                    sh 'docker system prune -af'
-                }
-            }
-        }
-
-    
             stage('checkoutservice') {
               steps {
                script {
