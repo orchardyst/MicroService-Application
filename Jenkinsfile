@@ -13,14 +13,7 @@ pipeline {
                 }
             }
         } 
-  stages {
-        stage('Cleanup Docker Environment') {
-            steps {
-                script {
-                    sh 'docker system prune -af'
-                }
-            }
-        }
+  
       
       stage('adservice') {
               steps {
@@ -48,7 +41,15 @@ pipeline {
             }
         }
        }
-
+stages {
+        stage('Cleanup Docker Environment') {
+            steps {
+                script {
+                    sh 'docker system prune -af'
+                }
+            }
+        }
+}
     stage('Cleanup Go Modules Cache') {
     steps {
         script {
