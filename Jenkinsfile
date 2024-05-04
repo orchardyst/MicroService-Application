@@ -41,7 +41,7 @@ pipeline {
             }
         }
        }
-stage {
+
         stage('Cleanup Docker Environment') {
             steps {
                 script {
@@ -49,7 +49,7 @@ stage {
                 }
             }
         }
-}
+
     stage('Cleanup Go Modules Cache') {
     steps {
         script {
